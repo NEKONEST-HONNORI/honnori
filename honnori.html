@@ -92,6 +92,7 @@
     display: grid; grid-template-columns: 1fr 1fr;
     position: relative; overflow: hidden;
   }
+
   /* diagonal stripe texture */
   .hero::before {
     content: '';
@@ -106,7 +107,7 @@
   .hero-left {
     display: flex; flex-direction: column; justify-content: center;
     padding: 5rem 3.5rem 5rem 6rem;
-    position: relative; z-index: 2;
+    position: relative; z-index: 3;
   }
   /* vintage badge stamp in hero */
   .hero-stamp {
@@ -459,7 +460,26 @@
   .vol-apply:hover { background: var(--ink); color: var(--cream); }
 
   /* ── REPORT ── */
-  #report { background: var(--slate-dark); }
+  #report {
+    background: var(--slate-dark);
+    position: relative; overflow: hidden;
+  }
+  #report::before {
+    content: '';
+    position: absolute;
+    left: -25%;
+    top: -25%;
+    width: 150%;
+    height: 150%;
+    background-image: url('nurie.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+  }
+  #report .container { position: relative; z-index: 1; }
   .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 3rem; background: rgba(232,224,204,0.08); }
   .report-card {
     background: var(--slate-dark); overflow: hidden;
@@ -748,6 +768,7 @@
         <div class="contact-detail"><span class="label">法人名</span><span>一般社団法人ほんのり</span></div>
         <div class="contact-detail"><span class="label">設立</span><span>2026年3月26日</span></div>
         <div class="contact-detail"><span class="label">住所</span><span>〒359-0033 埼玉県所沢市こぶし町27-47</span></div>
+        <div class="contact-detail"><span class="label">Email</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f19f949a9e9f948285b1999e9f9f9e8398c3c3c3df9b81">[email&#160;protected]</a></span></div>
       </div>
       <div class="contact-form">
         <div class="form-row"><label>お名前</label><input type="text" placeholder="山田 花子"></div>
