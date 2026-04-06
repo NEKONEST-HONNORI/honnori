@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;700;900&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 <style>
+  @font-face {
+    font-family: 'KoharuiroSunray';
+    src: url('GN-Koharuiro_Sunray.ttf') format('truetype');
+  }
   :root {
     --slate: #869fa8;
     --slate-dark: #667f88;
@@ -593,7 +597,19 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="nav-badge" style="background:transparent;border:none;box-shadow:none;overflow:hidden;"><img src="rogonakasiro.png" style="width:44px;height:44px;object-fit:contain;mix-blend-mode:multiply;"></div>
+    <div style="width:44px;height:44px;flex-shrink:0;">
+  <svg viewBox="248 93 184 184" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+    <g transform="translate(340, 185)">
+      <circle cx="0" cy="0" r="92" fill="none" stroke="#e8e0cc" stroke-width="2"/>
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#e8e0cc" stroke-width="0.8"/>
+      <text x="0" y="-52" text-anchor="middle" font-size="9.5" letter-spacing="4" fill="#e8e0cc" font-family="'Barlow Condensed',sans-serif" font-weight="600">一般社団法人</text>
+      <text x="0" y="12" text-anchor="middle" font-size="36" fill="#e8e0cc" font-family="KoharuiroSunray,'Noto Sans JP',sans-serif" font-weight="300" letter-spacing="6">ほんのり</text>
+      <line x1="-44" y1="26" x2="44" y2="26" stroke="#e8e0cc" stroke-width="0.8"/>
+      <path id="nav-arch" d="M -70,0 A 70,70 0 0,0 70,0" fill="none"/>
+      <text font-size="7.5" letter-spacing="3" fill="#e8e0cc" font-family="'Barlow Condensed',sans-serif" font-weight="600"><textPath href="#nav-arch" startOffset="12%">CAT SHELTER · NEKONEST · EST.2026</textPath></text>
+    </g>
+  </svg>
+</div>
     <div>
       <span class="nav-logo-sub">一般社団法人</span>
       <div class="nav-logo-text">ほんのり</div>
@@ -782,7 +798,19 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-badge" style="background:transparent;border:none;box-shadow:none;"><img src="rogonakasiro.png" style="width:56px;height:56px;object-fit:contain;mix-blend-mode:multiply;"></div>
+  <div style="width:64px;height:64px;">
+  <svg viewBox="248 93 184 184" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+    <g transform="translate(340, 185)">
+      <circle cx="0" cy="0" r="92" fill="none" stroke="rgba(232,224,204,0.5)" stroke-width="2"/>
+      <circle cx="0" cy="0" r="80" fill="none" stroke="rgba(232,224,204,0.4)" stroke-width="0.8"/>
+      <text x="0" y="-52" text-anchor="middle" font-size="9.5" letter-spacing="4" fill="rgba(232,224,204,0.6)" font-family="'Barlow Condensed',sans-serif" font-weight="600">一般社団法人</text>
+      <text x="0" y="12" text-anchor="middle" font-size="36" fill="rgba(232,224,204,0.7)" font-family="KoharuiroSunray,'Noto Sans JP',sans-serif" font-weight="300" letter-spacing="6">ほんのり</text>
+      <line x1="-44" y1="26" x2="44" y2="26" stroke="rgba(232,224,204,0.4)" stroke-width="0.8"/>
+      <path id="footer-arch" d="M -70,0 A 70,70 0 0,0 70,0" fill="none"/>
+      <text font-size="7.5" letter-spacing="3" fill="rgba(232,224,204,0.5)" font-family="'Barlow Condensed',sans-serif" font-weight="600"><textPath href="#footer-arch" startOffset="12%">CAT SHELTER · NEKONEST · EST.2026</textPath></text>
+    </g>
+  </svg>
+</div>
   <div>
     <strong>一般社団法人 ほんのり</strong><br>
     Cat Shelter Nekonest · TNR Project · Est. 2026 
