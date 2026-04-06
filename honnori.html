@@ -786,11 +786,13 @@
         <div class="contact-detail"><span class="label">住所</span><span>〒359-0033 埼玉県所沢市こぶし町27-47</span></div>
       </div>
       <div class="contact-form">
-        <div class="form-row"><label>お名前</label><input type="text" placeholder="山田 花子"></div>
-        <div class="form-row"><label>メールアドレス</label><input type="email" placeholder="example@email.com"></div>
-        <div class="form-row"><label>お問い合わせ種別</label><input type="text" placeholder="寄付 / ボランティア / 猫の保護依頼 / その他"></div>
-        <div class="form-row"><label>メッセージ</label><textarea placeholder="ご質問・ご相談内容をお書きください"></textarea></div>
-        <button class="form-submit">送信する</button>
+        <form action="https://formspree.io/f/xdappyaq" method="POST">
+          <div class="form-row"><label>お名前</label><input type="text" name="name" placeholder="山田 花子" required></div>
+          <div class="form-row"><label>メールアドレス</label><input type="email" name="email" placeholder="example@email.com" required></div>
+          <div class="form-row"><label>お問い合わせ種別</label><input type="text" name="type" placeholder="寄付 / 猫の保護依頼 / その他"></div>
+          <div class="form-row"><label>メッセージ</label><textarea name="message" placeholder="ご質問・ご相談内容をお書きください" required></textarea></div>
+          <button type="submit" class="form-submit">送信する</button>
+        </form>
       </div>
     </div>
   </div>
