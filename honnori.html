@@ -736,7 +736,7 @@
       <p class="section-lead">TNR活動には、手術費・医療費・飼料代・施設維持費など様々な費用がかかります。ご支援をよろしくお願いいたします。</p>
     </div>
     <div class="support-grid">
-      <div class="support-card"><div class="support-icon">💝</div><h3>ご寄付</h3><p>いただいたご寄付は、猫の手術費・医療費・一時預かり場の運営費として大切に使用いたします。金額は問いません。</p><a href="#contact" class="btn-donate">詳細を見る</a></div>
+      <div class="support-card"><div class="support-icon">💝</div><h3>ご寄付</h3><p>いただいたご寄付は、猫の手術費・医療費・一時預かり場の運営費として大切に使用いたします。金額は問いません。</p><a href="#" class="btn-donate" onclick="document.getElementById('bank-modal').style.display='flex';return false;">振込先を見る</a></div>
       <div class="support-card"><div class="support-icon">🍱</div><h3>物資支援</h3><p>キャットフード・砂・ケージ・医療用品など、活動に必要な物資をご提供いただけると大変助かります。</p><a href="https://www.amazon.co.jp/hz/wishlist/ls/YX3PRWXZRX39" target="_blank" rel="noopener noreferrer" class="btn-donate" onclick="window.open('https://www.amazon.co.jp/hz/wishlist/ls/YX3PRWXZRX39','_blank');return false;">物資リスト</a></div>
       <div class="support-card"><div class="support-icon">📢</div><h3>情報拡散</h3><p>SNSでのシェアや、地域での口コミも大きな力になります。活動を広めていただけるだけでも大変ありがたいです。</p><a href="#contact" class="btn-donate">シェアする</a></div>
     </div>
@@ -816,3 +816,33 @@
   <div>
     <strong>一般社団法人 ほんのり</strong><br>
     Cat Shelter Nekonest · TNR Project · Est. 2026 
+<!-- 振込先モーダル -->
+<div id="bank-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;" onclick="if(event.target===this)this.style.display='none';">
+  <div style="background:#1e1a12;border:2px solid #e8e0cc;padding:2.5rem;max-width:420px;width:90%;position:relative;">
+    <button onclick="document.getElementById('bank-modal').style.display='none';" style="position:absolute;top:1rem;right:1rem;background:transparent;border:none;color:#e8e0cc;font-size:1.2rem;cursor:pointer;">✕</button>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#e8e0cc;letter-spacing:0.15em;margin-bottom:1.5rem;">振込先口座</h3>
+    <table style="width:100%;border-collapse:collapse;">
+      <tr style="border-bottom:1px solid rgba(232,224,204,0.15);">
+        <td style="padding:0.75rem 0;font-size:0.8rem;color:rgba(232,224,204,0.5);width:40%;">銀行名</td>
+        <td style="padding:0.75rem 0;font-size:0.85rem;color:#e8e0cc;">GMOあおぞらネット銀行</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(232,224,204,0.15);">
+        <td style="padding:0.75rem 0;font-size:0.8rem;color:rgba(232,224,204,0.5);">支店名</td>
+        <td style="padding:0.75rem 0;font-size:0.85rem;color:#e8e0cc;">法人第二営業部（102）</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(232,224,204,0.15);">
+        <td style="padding:0.75rem 0;font-size:0.8rem;color:rgba(232,224,204,0.5);">口座種別</td>
+        <td style="padding:0.75rem 0;font-size:0.85rem;color:#e8e0cc;">普通</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(232,224,204,0.15);">
+        <td style="padding:0.75rem 0;font-size:0.8rem;color:rgba(232,224,204,0.5);">口座番号</td>
+        <td style="padding:0.75rem 0;font-size:0.85rem;color:#e8e0cc;">2442163</td>
+      </tr>
+      <tr>
+        <td style="padding:0.75rem 0;font-size:0.8rem;color:rgba(232,224,204,0.5);">口座名義</td>
+        <td style="padding:0.75rem 0;font-size:0.85rem;color:#e8e0cc;">一般社団法人ほんのり<br><span style="font-size:0.75rem;color:rgba(232,224,204,0.5);">シヤ）ホンノリ</span></td>
+      </tr>
+    </table>
+    <p style="margin-top:1.5rem;font-size:0.78rem;color:rgba(232,224,204,0.45);line-height:1.8;">ご支援いただき、誠にありがとうございます。いただいたご寄付は猫たちの医療費・活動費として大切に使用いたします。</p>
+  </div>
+</div>
