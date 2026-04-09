@@ -588,14 +588,39 @@
         <div class="contact-detail"><span class="label">住所</span><span>〒359-0033 埼玉県所沢市こぶし町27-47</span></div>
       </div>
       <div class="contact-form">
-        <form action="https://formspree.io/f/xdappyaq" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/xdappyaq" method="POST">
           <div class="form-row"><label>お名前</label><input type="text" name="name" placeholder="山田 花子" required></div>
           <div class="form-row"><label>メールアドレス</label><input type="email" name="email" placeholder="example@email.com" required></div>
           <div class="form-row"><label>お問い合わせ種別</label><input type="text" name="type" placeholder="寄付 / 猫の保護依頼 / その他"></div>
           <div class="form-row"><label>メッセージ</label><textarea name="message" placeholder="ご質問・ご相談内容をお書きください" required></textarea></div>
           <button type="submit" class="form-submit">送信する</button>
         </form>
+        <div id="form-success" style="display:none;text-align:center;padding:2rem;">
+          <p style="font-size:1.1rem;color:var(--olive-deep);margin-bottom:0.5rem;">✓ 送信が完了しました</p>
+          <p style="font-size:0.85rem;color:var(--ink-mid);">お問い合わせありがとうございます。</p>
+        </div>
       </div>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var form = this;
+          var data = new FormData(form);
+          fetch('https://formspree.io/f/xdappyaq', {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(response) {
+            if (response.ok) {
+              form.style.display = 'none';
+              document.getElementById('form-success').style.display = 'block';
+            } else {
+              alert('送信に失敗しました。もう一度お試しください。');
+            }
+          }).catch(function() {
+            alert('送信に失敗しました。もう一度お試しください。');
+          });
+        });
+      </script>
     </div>
   </div>
 </section>
