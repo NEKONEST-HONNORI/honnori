@@ -347,13 +347,14 @@
     background-repeat: no-repeat;
     background-position: top left;
     opacity: 0.08;
+    filter: sepia(1) hue-rotate(10deg);
     pointer-events: none;
     z-index: 0;
   }
   #report .container { position: relative; z-index: 1; }
   .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
   .report-card {
-    background: white; border-radius: 16px; overflow: hidden;
+    background: var(--greige); border-radius: 16px; overflow: hidden;
     border: 1px solid var(--greige-pale);
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   }
