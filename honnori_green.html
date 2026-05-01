@@ -353,14 +353,14 @@
   #report .container { position: relative; z-index: 1; }
   .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
   .report-card {
-    background: transparent; border-radius: 16px; overflow: hidden;
+    background: var(--greige-bg); border-radius: 16px; overflow: hidden;
     border: 1px solid var(--greige-pale);
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   }
   .report-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px var(--shadow); border-color: var(--olive-pale); }
   .report-img {
     height: 160px; overflow: hidden;
-    background: transparent;
+    background: var(--greige-pale);
     display: flex; align-items: center; justify-content: center;
   }
   .report-img img { width: 100%; height: 100%; object-fit: contain; }
