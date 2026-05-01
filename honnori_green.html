@@ -454,13 +454,55 @@
         <span class="hero-stamp-bottom"></span>
       </div>
     </div>
-    <h1 class="hero-title-big">地域の猫と、<br><span style="white-space:nowrap;">人が<em>ほんのり</em></span><br>つながる社会へ。</h1>
+    <h1 class="hero-title-big">地域の猫と、<br>人が<em>ほんのり</em><br>つながる社会へ。</h1>
     <div class="hero-divider"><span>🌿</span></div>
     <p class="hero-sub">TNR活動（Trap・Neuter・Return）を通じて、地域猫と人が共存できるまちづくりを目指しています。捕獲・不妊手術・元の場所への返還を丁寧に行い、命を大切にする地域社会を育てます。</p>
     <div class="hero-cta">
       <a href="#support" class="btn-primary">寄付・支援をする</a>
       <a href="#about" class="btn-secondary">活動を知る</a>
     </div>
+    <!-- クラファンカウントダウン -->
+    <div id="cf-countdown-wrap" style="margin-top:1.8rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,0.45);border:1.5px solid var(--olive-pale);border-radius:12px;display:inline-block;animation:fadeUp 0.9s 0.3s ease both;">
+      <p style="font-size:0.75rem;letter-spacing:0.15em;color:var(--olive);margin-bottom:0.5rem;font-family:'Zen Maru Gothic',sans-serif;">🎉 クラファン公開まであと</p>
+      <div id="cf-countdown" style="display:flex;gap:0.8rem;align-items:flex-end;">
+        <div style="text-align:center;"><span id="cd-days" style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--olive-deep);line-height:1;">--</span><span style="font-size:0.7rem;color:var(--olive);margin-left:2px;">日</span></div>
+        <div style="text-align:center;"><span id="cd-hours" style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--olive-deep);line-height:1;">--</span><span style="font-size:0.7rem;color:var(--olive);margin-left:2px;">時間</span></div>
+        <div style="text-align:center;"><span id="cd-mins" style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--olive-deep);line-height:1;">--</span><span style="font-size:0.7rem;color:var(--olive);margin-left:2px;">分</span></div>
+        <div style="text-align:center;"><span id="cd-secs" style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--olive-deep);line-height:1;">--</span><span style="font-size:0.7rem;color:var(--olive);margin-left:2px;">秒</span></div>
+      </div>
+      <p id="cf-open-msg" style="display:none;font-size:1rem;color:var(--olive-deep);font-weight:bold;">🎊 クラファン公開中！ <a href="https://camp-fire.jp/projects/946115/view?utm_campaign=cp_po_share_c_msg_mypage_projects_show" target="_blank" rel="noopener noreferrer" style="color:var(--olive-deep);text-decoration:underline;">応援する →</a></p>
+    </div>
+    <script>
+      (function(){
+        var CF_PREVIEW = 'https://camp-fire.jp/projects/946115/preview?token=1pau3b6j&utm_campaign=cp_po_share_c_msg_mypage_projects_show';
+        var CF_PUBLIC  = 'https://camp-fire.jp/projects/946115/view?utm_campaign=cp_po_share_c_msg_mypage_projects_show';
+        var target = new Date('2026-05-07T20:00:00+09:00');
+        /* NEWSカードのリンクも動的に切り替え */
+        var newsLink = document.getElementById('cf-news-link');
+        function update(){
+          var now = new Date();
+          var diff = target - now;
+          var isOpen = diff <= 0;
+          if(newsLink) newsLink.href = isOpen ? CF_PUBLIC : CF_PREVIEW;
+          if(isOpen){
+            document.getElementById('cf-countdown').style.display = 'none';
+            document.getElementById('cf-open-msg').style.display = 'block';
+            document.querySelector('#cf-countdown-wrap p').style.display = 'none';
+            return;
+          }
+          var d = Math.floor(diff/86400000);
+          var h = Math.floor((diff%86400000)/3600000);
+          var m = Math.floor((diff%3600000)/60000);
+          var s = Math.floor((diff%60000)/1000);
+          document.getElementById('cd-days').textContent = d;
+          document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+          document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+          document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+          setTimeout(update, 1000);
+        }
+        update();
+      })();
+    </script>
   </div>
   <div class="hero-right">
     <img src="rinpon.png" class="hero-img-slot" alt="リンとポン">
@@ -564,6 +606,7 @@
       <p class="section-title-jp">ニュース</p>
     </div>
     <div class="report-grid">
+      <div class="report-card"><div class="report-img" style="background:#f0ece4;display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🔥</div><div class="report-body"><p class="report-date">2026年5月7日 20:00 公開予定</p><h3>クラウドファンディングを開始します！</h3><p style="font-size:0.82rem;color:var(--ink-mid);margin-top:0.5rem;line-height:1.7;">ねこねすとの活動を応援してください。CAMPFIRE にてクラファンを5月7日20時より公開予定です。</p><a id="cf-news-link" href="https://camp-fire.jp/projects/946115/preview?token=1pau3b6j&utm_campaign=cp_po_share_c_msg_mypage_projects_show" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:0.8rem;font-size:0.8rem;color:var(--olive-deep);text-decoration:underline;">CAMPFIREで見る →</a></div></div>
       <div class="report-card"><div class="report-img" style="background:white;"><img src="nekonestrogo.png" alt="ロゴ" style="object-fit:contain; mix-blend-mode:multiply;"></div><div class="report-body"><p class="report-date">2026年3月26日</p><h3>一般社団法人ほんのりを設立しました</h3></div></div>
       <div class="report-card"><div class="report-img" style="background:white;"><img src="nekonestrogo.png" alt="ロゴ" style="object-fit:contain; mix-blend-mode:multiply;"></div><div class="report-body"><p class="report-date">2026年4月（予定）</p><h3>猫の一時預かり場「ねこねすと」を開設予定</h3></div></div>
       <div class="report-card"><div class="report-img" style="background:white;"><img src="nekonestrogo.png" alt="ロゴ" style="object-fit:contain; mix-blend-mode:multiply;"></div><div class="report-body"><p class="report-date">Coming Soon</p><h3>TNR活動報告・第1弾を準備中です</h3></div></div>
